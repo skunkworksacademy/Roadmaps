@@ -1,11 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
     const glitchEffect = () => {
-        const heroText = document.querySelector('#hero h1');
-        heroText.classList.add('glitch');
-        setTimeout(() => {
-            heroText.classList.remove('glitch');
-        }, 300);
+        const glitchElements = document.querySelectorAll('.glitch');
+        glitchElements.forEach(element => {
+            element.classList.add('glitch-active');
+            setTimeout(() => {
+                element.classList.remove('glitch-active');
+            }, 500);
+        });
     };
 
+    // Set an interval to trigger the glitch effect randomly on elements
     setInterval(glitchEffect, 1000);
 });
