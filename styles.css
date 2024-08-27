@@ -4,6 +4,84 @@ body {
     font-family: 'Press Start 2P', cursive;
     overflow-x: hidden;
 }
+/* Basic color scheme */
+:root {
+    --main-bg-color: #000000;
+    --highlight-color: #00ff00;
+    --text-color: #ffffff;
+    --error-color: #ff0000;
+    --warning-color: #ff6600;
+}
+
+/* Body and main structure */
+body {
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    font-family: 'Press Start 2P', sans-serif;
+}
+
+/* Glitch effect */
+.glitch {
+    color: var(--highlight-color);
+    font-size: 4rem;
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::before, .glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--error-color);
+    clip: rect(0, 900px, 0, 0);
+    animation: glitch-skew 2s infinite linear alternate-reverse;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -2px 0 var(--error-color);
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -2px 0 var(--warning-color);
+    animation: glitch-skew 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-skew {
+    0% {
+        clip: rect(0, 9999px, 0, 0);
+        transform: skew(0.02deg);
+    }
+    10% {
+        clip: rect(44px, 9999px, 56px, 0);
+        transform: skew(0.25deg);
+    }
+    /* Continue with additional glitch steps */
+}
+
+/* Pixelation effect */
+.pixelated {
+    image-rendering: pixelated;
+}
+
+/* Button styling */
+.button {
+    background-color: var(--highlight-color);
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--error-color);
+    color: var(--main-bg-color);
+    animation: glitch 0.3s infinite;
+}
 
 header nav ul {
     display: flex;
