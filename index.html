@@ -10,33 +10,39 @@
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#home" class="glitch" data-text="Home">Home</a></li>
+                <li><a href="#about" class="glitch" data-text="About">About</a></li>
+                <li><a href="#services" class="glitch" data-text="Services">Services</a></li>
+                <li><a href="#contact" class="glitch" data-text="Contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
     <section id="hero">
-        <h1>ALL YOUR PRIVATE INFO ARE BELONG TO US!!!</h1>
+        <div class="layer" style="z-index: 2; position: absolute;">
+            <img src="glitching-graphic1.png" class="pixelated" alt="Glitch Graphic">
+        </div>
+        <div class="layer" style="z-index: 3; position: absolute;">
+            <h1 class="glitch" data-text="ALL YOUR PRIVATE INFO ARE BELONG TO US!!!">ALL YOUR PRIVATE INFO ARE BELONG TO US!!!</h1>
+        </div>
     </section>
     
     <section id="services">
-        <div class="service">
+        <div class="service glitch" data-text="Penetration Testing">
             <h2>Penetration Testing</h2>
             <p>We hack you before they do.</p>
         </div>
-        <div class="service">
+        <div class="service glitch" data-text="Security Audits">
             <h2>Security Audits</h2>
             <p>Find the weaknesses in your system.</p>
         </div>
     </section>
     
     <footer>
-        <div class="footer-logo">Graydon Truth</div>
+        <div class="footer-logo glitch" data-text="Graydon Truth">Graydon Truth</div>
         <div class="social-media-icons">
-            <!-- Social Media Icons Here -->
+            <a href="https://twitter.com" class="button glitch" data-text="Twitter">Twitter</a>
+            <a href="https://github.com" class="button glitch" data-text="GitHub">GitHub</a>
         </div>
     </footer>
     
