@@ -1,0 +1,63 @@
+body {
+    background-color: #000;
+    color: #00ff00;
+    font-family: 'Press Start 2P', cursive;
+    overflow-x: hidden;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    background-color: #111;
+}
+
+header nav ul li a {
+    color: #0f0;
+    text-decoration: none;
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: #f00;
+    text-decoration: none;
+    animation: glitch 0.3s infinite;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('glitch-bg.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #ff0000;
+}
+
+.service {
+    margin: 50px 0;
+    padding: 20px;
+    border: 1px solid #0f0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #111;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.footer-logo {
+    font-size: 2em;
+    animation: glitch 0.5s infinite;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, -2px); }
+    80% { transform: translate(2px, 2px); }
+    100% { transform: translate(0); }
+}
