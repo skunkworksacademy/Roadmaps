@@ -11,6 +11,10 @@ Welcome to the Skunkworks Academy Roadmaps repository! This repository is dedica
 
 ### **1. Cloud, Cybersecurity, and AI Mastery**
 
+![Cloud Computing](https://img.shields.io/badge/Cloud%20Computing-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![Cybersecurity](https://img.shields.io/badge/Cybersecurity-FF0000?style=for-the-badge&logo=red-hat&logoColor=white)
+![AI](https://img.shields.io/badge/Artificial%20Intelligence-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+
 This roadmap is divided into three major sections, each containing several topics and subtopics to cover the essential concepts and skills:
 
 #### **Cloud Computing**
@@ -39,6 +43,9 @@ This roadmap is divided into three major sections, each containing several topic
 
 ### **2. Cybersecurity Fundamentals**
 
+![Network Security](https://img.shields.io/badge/Network%20Security-006600?style=for-the-badge&logo=cisco&logoColor=white)
+![Ethical Hacking](https://img.shields.io/badge/Ethical%20Hacking-4B275F?style=for-the-badge&logo=hackaday&logoColor=white)
+
 This roadmap covers the foundational aspects of cybersecurity, focusing on threat prevention, risk management, and compliance:
 
 #### **Cybersecurity Concepts**
@@ -57,6 +64,9 @@ This roadmap covers the foundational aspects of cybersecurity, focusing on threa
 - Compliance Auditing
 
 ### **3. Artificial Intelligence Concepts and Applications**
+
+![Machine Learning](https://img.shields.io/badge/Machine%20Learning-FF6F00?style=for-the-badge&logo=python&logoColor=white)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-FF6F00?style=for-the-badge&logo=pytorch&logoColor=white)
 
 This roadmap guides you through AI concepts, machine learning algorithms, tools, and practical applications:
 
@@ -79,6 +89,46 @@ This roadmap guides you through AI concepts, machine learning algorithms, tools,
 - Natural Language Processing (NLP)
 - Autonomous Vehicles and Robotics
 - AI in Healthcare
+
+### **4. NEW: Azure Learning Roadmap for M&S Senior Platform Engineers**
+
+![Azure](https://img.shields.io/badge/Microsoft%20Azure-0089D6?style=for-the-badge&logo=microsoft-azure&logoColor=white)
+![DevOps](https://img.shields.io/badge/DevOps-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white)
+
+This new 4-week intensive program is specifically designed for M&S Senior Platform Engineers:
+
+#### **Week 1: Core Azure Tools & Cloud Fundamentals**
+- Azure Portal and Azure CLI
+- GitHub & GitHub Actions
+- SSMS & Azure SQL Databases
+
+#### **Week 2: DevOps & Automation**
+- Azure DevOps
+- Kubernetes on Azure (AKS)
+- Advanced GitHub Actions
+
+#### **Week 3: Cost Optimization & Monitoring**
+- Azure Cost Management
+- Dynatrace & Azure Monitor
+
+#### **Week 4: AI & Data Tools**
+- Azure AI Studio
+- Databricks
+- Power BI
+
+```mermaid
+gantt
+    title M&S Senior Platform Engineers Roadmap
+    dateFormat  YYYY-MM-DD
+    section Week 1
+    Azure Fundamentals    :a1, 2024-10-01, 5d
+    section Week 2
+    DevOps & Automation   :a2, 2024-10-08, 5d
+    section Week 3
+    Cost & Monitoring     :a3, 2024-10-15, 5d
+    section Week 4
+    AI & Data Tools       :a4, 2024-10-22, 5d
+```
 
 ## 📁 Repository Structure
 
@@ -125,6 +175,20 @@ Roadmaps/
 │   ├── ml_algorithms.html
 │   ├── tools_libraries.html
 │   ├── ai_applications.html
+│   └── resources.html
+├── Azure_MS_Platform_Engineers/
+│   ├── README.md
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
+│   ├── images/
+│   │   └── roadmap-diagrams.png
+│   ├── index.html
+│   ├── week1.html
+│   ├── week2.html
+│   ├── week3.html
+│   ├── week4.html
 │   └── resources.html
 └── README.md
 ```
