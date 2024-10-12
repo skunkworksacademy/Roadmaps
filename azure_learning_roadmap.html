@@ -3,11 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skunkworks Academy presents an Azure Learning Roadmap tailored for Senior Platform Engineers, covering Azure DevOps, cloud tools, and more.">
     <link href="https://github.com/skunkworksza/www/blob/main/assets/skunkworks/logo-skunkworks-trans%2040%20%C3%97%2040%20px.png?raw=true" rel="icon" type="image/png" />
     <title>Azure Learning Roadmap for Azure DevOps Senior Platform Engineers | Skunkworks Academy</title>
+    
+    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- External Libraries for Charts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    
+    <!-- Tailwind CSS Custom Configuration -->
     <script>
         tailwind.config = {
             theme: {
@@ -21,7 +28,10 @@
             }
         }
     </script>
+
+    <!-- Custom Styles -->
     <style>
+        /* Flip card styles */
         .flip-card {
             perspective: 1000px;
         }
@@ -38,6 +48,8 @@
         .flip-card-back {
             transform: rotateY(180deg);
         }
+
+        /* Disclosed list styles */
         .disclosed-list {
             background-color: #f9f9f9;
             border-radius: 5px;
@@ -54,117 +66,169 @@
             padding-left: 20px;
             list-style-type: disc;
         }
+
+        /* Accessibility improvements */
+        img[alt] {
+            max-height: 100%;
+            width: auto;
+        }
+
+        /* Responsive padding for container */
+        @media (min-width: 640px) {
+            .container {
+                max-width: 640px;
+            }
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container {
+                max-width: 1024px;
+            }
+        }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body class="bg-gray-100 font-sans antialiased">
+    <!-- Header Section -->
     <header class="bg-msblue text-white py-6">
         <div class="container mx-auto px-4 flex items-center justify-between">
             <div>
                 <h1 class="text-4xl font-bold">Azure Learning Roadmap</h1>
-                <p class="mt-2">For Azure DevOps Senior Platform Engineers</p>
+                <p class="mt-2 text-lg">For Azure DevOps Senior Platform Engineers</p>
             </div>
-            <img src="https://azure.microsoft.com/svghandler/azure-blue.svg" alt="Microsoft Azure Logo" class="h-12">
+            <img src="https://azure.microsoft.com/svghandler/azure-blue.svg" alt="Microsoft Azure Logo" class="h-12" loading="lazy">
         </div>
     </header>
 
     <main class="container mx-auto px-4 py-8">
+        <!-- Learning Path Overview Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Learning Path Overview</h2>
-            <p class="mb-6 text-lg">Embark on a comprehensive journey through Microsoft Azure, tailored specifically for Senior Platform Engineers. This program is designed to equip you with the skills and knowledge needed to leverage Azure's powerful cloud capabilities in the retail sector. Our curriculum is structured to provide both theoretical understanding and hands-on experience with the latest Azure technologies.</p>
+            <p class="mb-6 text-lg leading-relaxed">
+                Embark on a comprehensive journey through Microsoft Azure, tailored specifically for Senior Platform Engineers in the retail sector. This program equips you with the skills and knowledge needed to leverage Azure's powerful cloud capabilities. Each session is 30-60 minutes long, designed to run outside of office hours, ensuring a balance between learning and professional commitments.
+            </p>
+    
+            <!-- Week 1: Core Azure Tools & Cloud Fundamentals -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
-                    <h3 class="text-xl font-semibold mb-2 text-msblue">Week 1: Core Azure Tools & Cloud Fundamentals</h3>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Azure Portal (Days 1)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Master the Azure user interface, learn to manage resources, and understand key services like Virtual Machines, App Services, and Azure Storage.</li>
+                    <h3 class="text-xl font-semibold mb-4 text-msblue">Week 1: Core Azure Tools & Cloud Fundamentals</h3>
+                    <div class="disclosed-list mb-4">
+                        <div class="disclosed-list-header font-semibold">Azure Portal (Day 1)</div>
+                        <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                            <li>Master the Azure user interface, manage resources efficiently, and explore key services such as Virtual Machines, App Services, and Azure Storage.</li>
                         </ul>
                     </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">GitHub & GitHub Actions (Days 3)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Dive into version control with Git, create and manage repositories, and automate workflows with GitHub Actions. You'll set up CI/CD pipelines for Azure deployments.</li>
+                    <div class="disclosed-list mb-4">
+                        <div class="disclosed-list-header font-semibold">GitHub & GitHub Actions (Day 2)</div>
+                        <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                            <li>Dive into version control with Git, create and manage repositories, and automate workflows using GitHub Actions.</li>
+                            <li>Set up CI/CD pipelines for streamlined deployments to Azure.</li>
                         </ul>
                     </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">SSMS & Azure SQL Databases (Day 3)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Explore SQL Server Management Studio, connect to Azure SQL Databases, and learn essential database management tasks in the cloud.</li>
+                    <div class="disclosed-list mb-4">
+                        <div class="disclosed-list-header font-semibold">SSMS & Azure SQL Databases (Day 3)</div>
+                        <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                            <li>Explore SQL Server Management Studio, connect to Azure SQL Databases, and perform essential cloud-based database management tasks.</li>
                         </ul>
                     </div>
                     <p class="mt-4 text-sm italic">Hands-on Project: Deploy a basic web application to Azure App Service using GitHub Actions for continuous deployment.</p>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
-                    <h3 class="text-xl font-semibold mb-2 text-msblue">Week 2: DevOps & Automation</h3>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Azure DevOps (Days 1)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Explore Azure DevOps services including Pipelines, Repos, Artifacts, and Boards. Learn to create comprehensive CI/CD pipelines and manage projects using agile methodologies.</li>
-                        </ul>
-                    </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Kubernetes on Azure (AKS) (Days 2)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Dive into containerization with Docker and orchestration with Kubernetes. Set up and manage Azure Kubernetes Service (AKS) clusters, deploy applications, and implement scaling and high availability strategies.</li>
-                        </ul>
-                    </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">GitHub Actions (Advanced) (Day 3)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Build on your GitHub Actions knowledge with advanced workflow automation, including multi-job pipelines, environment management, and integration with external services.</li>
-                        </ul>
-                    </div>
-                    <p class="mt-4 text-sm italic">Hands-on Project: Containerize an application, deploy it to AKS, and set up a full CI/CD pipeline using Azure DevOps and GitHub Actions.</p>
+            </div>
+    
+            <!-- Week 2: DevOps & Automation -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
+                <h3 class="text-xl font-semibold mb-4 text-msblue">Week 2: DevOps & Automation</h3>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Azure DevOps (Day 1)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Explore Azure DevOps services including Pipelines, Repos, Artifacts, and Boards.</li>
+                        <li>Learn to create comprehensive CI/CD pipelines and manage projects using agile methodologies.</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
-                    <h3 class="text-xl font-semibold mb-2 text-msblue">Week 3: Cost Optimization & Monitoring</h3>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Azure Cost Management (Days 1)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Understand Azure pricing models, set up budgets and alerts, and implement cost-saving strategies like reserved instances and auto-scaling. Learn to analyze and forecast cloud spending.</li>
-                        </ul>
-                    </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Dynatrace & Azure Monitor (Days 2-3)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Implement comprehensive monitoring solutions. Set up Dynatrace for application performance monitoring, and use Azure Monitor for infrastructure and application insights. Create custom dashboards and set up alerting for proactive management.</li>
-                        </ul>
-                    </div>
-                    <p class="mt-4 text-sm italic">Hands-on Project: Implement a cost optimization strategy for a sample Azure environment and set up a comprehensive monitoring solution using Dynatrace and Azure Monitor.</p>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Kubernetes on Azure (AKS) (Day 2)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Dive into containerization with Docker and orchestration with Kubernetes.</li>
+                        <li>Set up and manage Azure Kubernetes Service (AKS) clusters, deploy applications, and implement scaling and high availability strategies.</li>
+                    </ul>
                 </div>
-                <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
-                    <h3 class="text-xl font-semibold mb-2 text-msblue">Week 4: AI & Data Tools</h3>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Azure AI Studio (Days 1)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Dive into Azure's AI capabilities. Learn to use pre-trained AI models for computer vision, natural language processing, and speech recognition. Explore custom model development for industry-specific use cases like demand forecasting and customer sentiment analysis.</li>
-                        </ul>
-                    </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Databricks (Days 2)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Master big data processing with Azure Databricks. Learn to create data pipelines, perform ETL operations, and implement machine learning at scale. Focus on industry-specific scenarios like customer segmentation and product recommendation engines.</li>
-                        </ul>
-                    </div>
-                    <div class="disclosed-list">
-                        <div class="disclosed-list-header">Power BI (Day 3)</div>
-                        <ul class="disclosed-list-content">
-                            <li>Create powerful data visualizations and interactive dashboards. Connect to various Azure data sources, design reports, and set up real-time analytics for business intelligence in industry specific contexts.</li>
-                        </ul>
-                    </div>
-                    <p class="mt-4 text-sm italic">Hands-on Project: Develop an end-to-end data analytics solution for industry specific scenarios, incorporating AI predictions, data processing with Databricks, and visualizations in Power BI.</p>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">GitHub Actions (Advanced) (Day 3)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Build on your GitHub Actions knowledge with advanced workflow automation, including multi-job pipelines, environment management, and integration with external services.</li>
+                    </ul>
                 </div>
+                <p class="mt-4 text-sm italic">Hands-on Project: Containerize an application, deploy it to AKS, and set up a full CI/CD pipeline using Azure DevOps and GitHub Actions.</p>
+            </div>
+    
+            <!-- Week 3: Cost Optimization & Monitoring -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
+                <h3 class="text-xl font-semibold mb-4 text-msblue">Week 3: Cost Optimization & Monitoring</h3>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Azure Cost Management (Day 1)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Understand Azure pricing models, set up budgets and alerts, and implement cost-saving strategies like reserved instances and auto-scaling.</li>
+                        <li>Analyze and forecast cloud spending.</li>
+                    </ul>
+                </div>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Monitoring with Dynatrace (Day 2)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Implement comprehensive monitoring solutions. Set up Dynatrace for application performance monitoring and use Azure Monitor for infrastructure insights.</li>
+                        <li>Create custom dashboards and set up proactive alerting.</li>
+                    </ul>
+                </div>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Monitoring with Azure Monitor (Day 3)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Set up Azure Monitor to track metrics, logs, and events across Azure resources.</li>
+                        <li>Implement application and infrastructure monitoring using Azure Monitor’s diagnostics tools. Create custom dashboards and set up actionable alerts.</li>
+                    </ul>
+                </div>
+                <p class="mt-4 text-sm italic">Hands-on Project: Implement a cost optimization strategy for a sample Azure environment and set up a comprehensive monitoring solution using Dynatrace and Azure Monitor.</p>
+            </div>
+    
+            <!-- Week 4: AI & Data Tools -->
+            <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
+                <h3 class="text-xl font-semibold mb-4 text-msblue">Week 4: AI & Data Tools</h3>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Azure AI Studio (Day 1)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Explore Azure’s AI capabilities, including pre-trained models for computer vision, natural language processing, and speech recognition.</li>
+                        <li>Develop custom models for industry-specific use cases like demand forecasting and customer sentiment analysis.</li>
+                    </ul>
+                </div>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Databricks (Day 2)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Master big data processing with Azure Databricks, focusing on creating data pipelines and performing ETL operations.</li>
+                        <li>Implement machine learning at scale for scenarios like customer segmentation and product recommendation engines.</li>
+                    </ul>
+                </div>
+                <div class="disclosed-list mb-4">
+                    <div class="disclosed-list-header font-semibold">Power BI (Day 3)</div>
+                    <ul class="disclosed-list-content list-disc pl-5 mt-2">
+                        <li>Create powerful data visualizations and interactive dashboards with Power BI.</li>
+                        <li>Connect to various Azure data sources, design insightful reports, and set up real-time analytics for business intelligence in industry-specific contexts.</li>
+                    </ul>
+                </div>
+                <p class="mt-4 text-sm italic">Hands-on Project: Develop an end-to-end data analytics solution for industry-specific scenarios, incorporating AI predictions, data processing with Databricks, and visualizations in Power BI.</p>
             </div>
         </section>
-
+    
+        <!-- Learning Timeline Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Learning Timeline</h2>
-            <p class="mb-6 text-lg">Our program is designed to fit into your busy schedule as a Senior Platform Engineer. Here's a breakdown of the course timeline:</p>
+            <p class="mb-6 text-lg leading-relaxed">Our program is designed to fit into your busy schedule as a Senior Platform Engineer. Here's a breakdown of the course timeline:</p>
             <div class="bg-white rounded-lg shadow-md p-6">
                 <div id="gantt_chart_div" style="width: 100%; height: 500px;"></div>
             </div>
         </section>
-
+    
+        <!-- Pricing Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Pricing and Payment Terms</h2>
             <div class="bg-white rounded-lg shadow-md p-6 border-t-4 border-msblue">
@@ -175,11 +239,13 @@
                 </ul>
             </div>
         </section>
-
+    
+        <!-- Key Features Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Key Features</h2>
-            <p class="mb-6 text-lg">Our Azure Learning Roadmap is designed with Senior Platform Engineers in mind. Here's what makes our program unique:</p>
+            <p class="mb-6 text-lg leading-relaxed">Our Azure Learning Roadmap is designed with Senior Platform Engineers in mind. Here's what makes our program unique:</p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
                 <div class="flip-card bg-transparent w-full h-64">
                     <div class="flip-card-inner relative w-full h-full">
                         <div class="flip-card-front absolute w-full h-full bg-msblue text-white rounded-lg flex items-center justify-center p-6">
@@ -190,6 +256,8 @@
                         </div>
                     </div>
                 </div>
+    
+                <!-- Feature 2 -->
                 <div class="flip-card bg-transparent w-full h-64">
                     <div class="flip-card-inner relative w-full h-full">
                         <div class="flip-card-front absolute w-full h-full bg-mslight text-msdark rounded-lg flex items-center justify-center p-6">
@@ -200,6 +268,8 @@
                         </div>
                     </div>
                 </div>
+    
+                <!-- Feature 3 -->
                 <div class="flip-card bg-transparent w-full h-64">
                     <div class="flip-card-inner relative w-full h-full">
                         <div class="flip-card-front absolute w-full h-full bg-msdark text-white rounded-lg flex items-center justify-center p-6">
@@ -210,108 +280,142 @@
                         </div>
                     </div>
                 </div>
+    
+                <!-- Feature 4 -->
                 <div class="flip-card bg-transparent w-full h-64">
                     <div class="flip-card-inner relative w-full h-full">
                         <div class="flip-card-front absolute w-full h-full bg-msdark text-white rounded-lg flex items-center justify-center p-6">
                             <h3 class="text-2xl font-semibold">Comprehensive Coverage</h3>
                         </div>
                         <div class="flip-card-back absolute w-full h-full bg-white text-msblue rounded-lg flex items-center justify-center p-6">
-                            <p>From cloud fundamentals to advanced AI and DevOps practices, this roadmap equips you with the skills necessary to excel as an Senior Platform Engineer.</p>
+                            <p>From cloud fundamentals to advanced AI and DevOps practices, this roadmap equips you with the skills necessary to excel as a Senior Platform Engineer.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+    
+        <!-- FAQs Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Frequently Asked Questions</h2>
             <div class="space-y-4">
                 <details class="bg-white rounded-lg shadow-md p-6">
                     <summary class="text-xl font-semibold cursor-pointer text-msblue">What prerequisites are required for this course?</summary>
-                    <p class="mt-2">Basic IT knowledge and familiarity with cloud concepts are recommended. Experience in retail IT is beneficial but not mandatory. No specific Azure experience is required, as we'll cover everything from the ground up.</p>
+                    <p class="mt-2 leading-relaxed">Basic IT knowledge and familiarity with cloud concepts are recommended. Experience in retail IT is beneficial but not mandatory. No specific Azure experience is required, as we'll cover everything from the ground up.</p>
                 </details>
                 <details class="bg-white rounded-lg shadow-md p-6">
                     <summary class="text-xl font-semibold cursor-pointer text-msblue">How long does the program take to complete?</summary>
-                    <p class="mt-2">The program is designed to be completed in 4 weeks, with detailed modules spread across each week.</p>
+                    <p class="mt-2 leading-relaxed">The program is designed to be completed in 4 weeks, with detailed modules spread across each week.</p>
                 </details>
                 <details class="bg-white rounded-lg shadow-md p-6">
                     <summary class="text-xl font-semibold cursor-pointer text-msblue">Is certification included in this program?</summary>
-                    <p class="mt-2">While this program thoroughly prepares you for Azure certifications, the actual certification exams are included in the course fee. However, we also provide guidance on which certifications align best with your career goals as an enior Platform Engineer.</p>
+                    <p class="mt-2 leading-relaxed">While this program prepares you for Azure certifications, the certification exams themselves are not included in the course fee. However, we provide guidance on which certifications align best with your career goals as a Senior Platform Engineer.</p>
                 </details>
             </div>
         </section>
-
+    
+        <!-- Contact Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Ready to Get Started?</h2>
             <div class="bg-mslight rounded-lg shadow-md p-6">
-                <p class="text-xl mb-4">Take the first step towards mastering Azure for retail IT. Contact Skunkworks Academy today to discuss your learning goals and customize your roadmap.</p>
+                <p class="text-xl mb-4">Take the first step toward mastering Azure for retail IT. Contact Skunkworks Academy today to discuss your learning goals and customize your roadmap.</p>
                 <a href="mailto:support@skunkworksacademy.com" class="bg-msblue text-white py-3 px-6 rounded-lg text-xl hover:bg-msdark transition duration-300 inline-block">Contact Us</a>
             </div>
         </section>
-
+    
+        <!-- Why Choose Us Section -->
         <section class="mb-12">
             <h2 class="text-3xl font-semibold mb-4 text-msdark">Why Choose Skunkworks Academy?</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-semibold mb-2 text-msblue">Industry Expertise</h3>
-                    <p>Our instructors bring years of experience in both Azure technologies and the retail sector, providing insights that go beyond textbook knowledge.</p>
+                    <p class="leading-relaxed">Our instructors bring years of experience in both Azure technologies and the retail sector, providing insights that go beyond textbook knowledge.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
                     <h3 class="text-xl font-semibold mb-2 text-msblue">Comprehensive Coverage</h3>
-                    <p>From cloud fundamentals to advanced AI and DevOps practices, this roadmap equips you with the skills necessary to excel as an M&S Senior Platform Engineer.</p>
+                    <p class="leading-relaxed">From cloud fundamentals to advanced AI and DevOps practices, this roadmap equips you with the skills necessary to excel as a Senior Platform Engineer.</p>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="bg-msdark text-white py-6">
+    
+    <footer class="bg-msdark text-white py-8">
         <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-between items-center">
-                <div>
-                    <h3 class="text-xl font-semibold mb-2">Skunkworks Academy</h3>
-                    <p>Empowering M&S Senior Platform Engineers with Azure Expertise</p>
+            <div class="flex flex-wrap justify-between items-start">
+                <!-- Branding Section -->
+                <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
+                    <h3 class="text-2xl font-bold mb-2">Skunkworks Academy</h3>
+                    <p class="leading-relaxed">Empowering M&S Senior Platform Engineers with cutting-edge Azure expertise and industry-focused learning experiences.</p>
                 </div>
-                <div class="mt-4 md:mt-0">
+    
+                <!-- Contact Section -->
+                <div class="w-full md:w-1/2 lg:w-1/3 mb-6">
                     <h4 class="text-lg font-semibold mb-2">Contact Us</h4>
-                    <p>Email: support@skunkworksacademy.com</p>
-                    <p>Phone: +27 87 164 5398</p>
+                    <ul class="leading-relaxed">
+                        <li>Email: <a href="mailto:support@skunkworksacademy.com" class="underline hover:text-mslight">support@skunkworksacademy.com</a></li>
+                        <li>Phone: <a href="tel:+27871645398" class="underline hover:text-mslight">+27 87 164 5398</a></li>
+                    </ul>
                 </div>
             </div>
+    
+            <!-- Divider -->
             <hr class="my-6 border-mslight">
-            <p class="text-center">&copy; 2024 Skunkworks Academy. All rights reserved.</p>
-            <p class="text-center text-sm">Disclaimer: Skunkworks Academy provides training and educational materials. All materials and course content are proprietary to Skunkworks Academy and should not be distributed without prior consent. Skunkworks Academy is not responsible for any direct or indirect loss caused by the use of this content. Confidentiality and non-disclosure agreements may apply to content related to specific client engagements. Use of this roadmap is subject to these terms.</p>
+    
+            <!-- Legal Section -->
+            <div class="text-center">
+                <p class="mb-4">&copy; 2024 Skunkworks Academy. All rights reserved.</p>
+                <p class="text-sm leading-relaxed">Disclaimer: Skunkworks Academy provides training and educational materials. All materials and course content are proprietary and must not be distributed without prior consent. Skunkworks Academy is not responsible for any direct or indirect loss caused by the use of its content. Confidentiality agreements may apply for specific engagements. By using this roadmap, you agree to these terms.</p>
+            </div>
         </div>
     </footer>
 
-    <script>
-        google.charts.load('current', {'packages':['gantt']});
-        google.charts.setOnLoadCallback(drawChart);
-        function drawChart() {
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Task ID');
-            data.addColumn('string', 'Task Name');
-            data.addColumn('string', 'Resource');
-            data.addColumn('date', 'Start Date');
-            data.addColumn('date', 'End Date');
-            data.addColumn('number', 'Duration');
-            data.addColumn('number', 'Percent Complete');
-            data.addColumn('string', 'Dependencies');
-            data.addRows([
-                ['1', 'Core Azure Tools & Cloud Fundamentals', 'Azure', new Date(2024, 9, 10), new Date(2024, 9, 14), null, 100, null],
-                ['2', 'DevOps & Automation', 'DevOps', new Date(2024, 9, 15), new Date(2024, 9, 19), null, 100, '1'],
-                ['3', 'Cost Optimization & Monitoring', 'Cost', new Date(2024, 9, 22), new Date(2024, 9, 26), null, 100, '2'],
-                ['4', 'AI & Data Tools', 'AI', new Date(2024, 9, 29), new Date(2024, 10, 2), null, 100, '3']
-            ]);
-            var options = {
-                height: 400,
-                gantt: {
-                    trackHeight: 30
-                }
-            };
-            var chart = new google.visualization.Gantt(document.getElementById('gantt_chart_div'));
-            chart.draw(data, options);
-        }
-    </script>
+        <script>
+            google.charts.load('current', {'packages': ['gantt']});
+            google.charts.setOnLoadCallback(drawChart);
+        
+            function drawChart() {
+                var data = new google.visualization.DataTable();
+                data.addColumn('string', 'Task ID');
+                data.addColumn('string', 'Task Name');
+                data.addColumn('string', 'Resource');
+                data.addColumn('date', 'Start Date');
+                data.addColumn('date', 'End Date');
+                data.addColumn('number', 'Duration');
+                data.addColumn('number', 'Percent Complete');
+                data.addColumn('string', 'Dependencies');
+        
+                data.addRows([
+                    ['1', 'Core Azure Tools & Cloud Fundamentals', 'Azure', new Date(2024, 9, 10), new Date(2024, 9, 14), null, 100, null],
+                    ['2', 'DevOps & Automation', 'DevOps', new Date(2024, 9, 15), new Date(2024, 9, 19), null, 100, '1'],
+                    ['3', 'Cost Optimization & Monitoring', 'Cost', new Date(2024, 9, 22), new Date(2024, 9, 26), null, 100, '2'],
+                    ['4', 'AI & Data Tools', 'AI', new Date(2024, 9, 29), new Date(2024, 10, 2), null, 100, '3']
+                ]);
+        
+                var options = {
+                    height: 400,
+                    gantt: {
+                        trackHeight: 35,
+                        criticalPathEnabled: true, // Highlights critical paths in the project.
+                        arrow: {
+                            angle: 100, // Adjust arrowhead angle for better visuals
+                            width: 2, // Arrow thickness for a clean look
+                            color: '#007bff' // Change arrow color to a consistent blue
+                        }
+                    }
+                };
+        
+                var chart = new google.visualization.Gantt(document.getElementById('gantt_chart_div'));
+                chart.draw(data, options);
+        
+                // Responsive chart redraw on window resize
+                window.addEventListener('resize', function() {
+                    chart.draw(data, options);
+                });
+            }
+        </script>
+
+
+    
 </body>
 </html>
 
